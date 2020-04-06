@@ -13,7 +13,7 @@ def get_status_code(url):
         code = connection.getcode()
         connection.close()
         return code
-    except urllib2.HTTPError, e:
+    except urllib2.HTTPError as e:
         return e.getcode()
 
 
@@ -60,6 +60,11 @@ def speed_test_monitoring(client, download_id, upload_id, latency_id):
     download = float(speed_test['download']) / (1000 * 1000) # Mbps
     upload = float(speed_test['upload']) / (1000 * 1000) # Mbps
     latency = float(speed_test['server']['latency']) # ms
+
+    if args.debug:
+        print("Download speed: %s Mbps" % download)
+        print("Upload speed: %s Mbps" % upload)
+        print("Latency: %s ms" % latency)
 
     # post download metric
     if download_id != 0:
@@ -142,6 +147,10 @@ def component_monitoring(client):
             else:
                 component_query_status = False
 
+        # print debug values
+        if args.debug:
+            print("Component %s analysis returned %b",component_name,component_query_status)
+
         # result analysis
         if component_query_status:
             # if components status is not operational
@@ -191,6 +200,7 @@ if __name__ == '__main__':
     parser.add_argument('--download-id', type=int, default=0, help="Metric ID for download graph (Optional)")
     parser.add_argument('--upload-id', type=int, default=0, help="Metric ID for upload graph (Optional)")
     parser.add_argument('--latency-id', type=int, default=0, help="Metric ID for latency graph (Optional)")
+    parser.add_argument('--debug', action='store_true', help="Enable debug")
     args = parser.parse_args()
 
     print(args)
