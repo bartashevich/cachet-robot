@@ -203,7 +203,8 @@ if __name__ == '__main__':
     parser.add_argument('--debug', action='store_true', help="Enable debug")
     args = parser.parse_args()
 
-    print(args)
+    if args.debug:
+        print(args)
 
     api = api_login(args.url, args.key)
 
