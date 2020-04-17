@@ -7,15 +7,21 @@ For HTTP code check, create a component, set **Link** with the target to monitor
 
 ![code](https://user-images.githubusercontent.com/9809095/79589794-e6612a80-80cd-11ea-989f-345830d3fe28.png)
 
+---
+
 ### Check ping result
 For ping check, create a component, set in the **Tags** `ping, 8.8.8.8` if you want to ping 8.8.8.8. Here you can also specify DNS name.
 
 ![ping](https://user-images.githubusercontent.com/9809095/79589801-e82aee00-80cd-11ea-86b0-4ac2b0011fcb.png)
 
+---
+
 ### Check port status
 For port status check, create a component, set **Tags** `port, 193.136.92.1:1194` if you are expecting **1194** to be open on **193.136.92.1**.
 
 ![port](https://user-images.githubusercontent.com/9809095/79589797-e7925780-80cd-11ea-8637-fae27d37abe9.png)
+
+---
 
 ### Metrics
 Here I'm interested in Internet, Upload and Latency metrics. But they are option, you don't need to have all 3 metrics for this to work. But you do need to create this manually and write down the ID of each metric for script to know which metrics is which.
@@ -26,6 +32,8 @@ Here I'm interested in Internet, Upload and Latency metrics. But they are option
 In the metric edit page you can obtain the ID by grabbing the last number in the URL.
 
 ![metric_id](https://user-images.githubusercontent.com/9809095/79589804-e95c1b00-80cd-11ea-8fac-6ef40574f5de.png)
+
+---
 
 ## Requirements
 - CachetHQ version 3.x
