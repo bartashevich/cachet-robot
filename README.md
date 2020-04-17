@@ -2,7 +2,19 @@
 
 ## How to configure component monitoring
 ### Check HTTP result code
+![code](https://user-images.githubusercontent.com/9809095/79589794-e6612a80-80cd-11ea-989f-345830d3fe28.png)
 
+### Check ping result
+![ping](https://user-images.githubusercontent.com/9809095/79589801-e82aee00-80cd-11ea-86b0-4ac2b0011fcb.png)
+
+### Check port status
+![port](https://user-images.githubusercontent.com/9809095/79589797-e7925780-80cd-11ea-8637-fae27d37abe9.png)
+
+### Metrics
+![metrics](https://user-images.githubusercontent.com/9809095/79589802-e8c38480-80cd-11ea-9199-742a0040a59a.png)
+
+### How to obtain metric ID
+![metric_id](https://user-images.githubusercontent.com/9809095/79589804-e95c1b00-80cd-11ea-8fac-6ef40574f5de.png)
 
 ## Requirements
 - CachetHQ version 3.x
