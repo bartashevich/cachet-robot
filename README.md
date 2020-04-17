@@ -65,5 +65,8 @@ optional arguments:
 ### Obtain SpeedTest results and save in Cachet metric graphs every 5 minutes using crontab
 \*/5 \* \* \* \* /usr/bin/python /var/www/cachet/cachet-robot/main.py --url http://URL/api/v1 --key API_KEY --speedtest --download-id 1 --upload-id 2 --latency-id 3 > /dev/null
 
+## Acknowledgements
+https://github.com/imlonghao/cachet.python
+
 ## Demo
 https://status.engageska-portugal.pt/
